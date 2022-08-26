@@ -4,7 +4,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["remoteBtn"]
   connect() {
-    console.log("CONNECT!!!!!!!!!!!!")
+    console.log("CONNECT!!!")
     this.remoteBtnTarget.hidden = true 
   }
 
