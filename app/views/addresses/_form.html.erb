@@ -10,20 +10,22 @@
       </ul>
     </div>
   <% end %>
+<div data-controller="form-element">
+      <%= form.button "Validate", formaction: new_address_path, formmethod: :get, data: {form_element_target: "remoteBtn"}  %>
+      <div>
+        <%= form.label :country, style: "display: block" %>
+        <%= form.select :country, address.countries.invert, {include_blank: true}, { data: {action: "change->form-element#autosubmit"}} %>
+      </div>
 
-  <div>
-    <%= form.label :country, style: "display: block" %>
-    <%= form.text_field :country %>
-  </div>
+      <div>
+        <%= form.label :state, style: "display: block" %>
+        <%= form.select :state, address.states.invert, { include_blank: true}, { data: {action: "change->form-elemnt#autosubmit"}}%>
+      </div>
 
-  <div>
-    <%= form.label :state, style: "display: block" %>
-    <%= form.text_field :state %>
-  </div>
-
-  <div>
-    <%= form.label :city, style: "display: block" %>
-    <%= form.text_field :city %>
+      <div>
+        <%= form.label :city, style: "display: block" %>
+        <%= form.select :city, address.cities %>
+      </div>
   </div>
 
   <div>
