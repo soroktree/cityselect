@@ -8,7 +8,7 @@ Gem City-State
 
  -Selected fileds in a form changed by auto submiting hidden button in stimulus controller by dispatching change action in view.
  
- -Using Turbo frame tag to submit only new adress form instead of whole page
+ -Using Turbo frame tag to submit dynamic new adress form only instead of whole page
 
 <img src="https://github.com/soroktree/cityselect/blob/main/app/assets/images/cityselect1.png" style="max-width: 100%;">
 
